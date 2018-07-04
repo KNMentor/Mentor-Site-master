@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css?family=Jura:300,400,600&subset=latin-ext');
+
+@font-face {
+      font-family: 'fontello';
+      src: url('./font/fontello.eot?85955927');
+      src: url('./font/fontello.eot?85955927#iefix') format('embedded-opentype'),
+           url('./font/fontello.woff?85955927') format('woff'),
+           url('./font/fontello.ttf?85955927') format('truetype'),
+           url('./font/fontello.svg?85955927#fontello') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+      font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+
+
+/*---------*/
+
+body {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Jura', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+button {
+    color: white;
+    height: 15rem;
+    width: 15rem;
+    padding: 0rem;
+    background-color: rgba(0,0,0,0.2);
+}
+
+/*---------*/
+
+.div-background,
+.second-row-height {
+    background-color: rgba(0,0,0,0.5);
+    border-top-right-radius: 2vmin;
+    border-bottom-right-radius: 0vmin;
+    border-bottom-left-radius: 2vmin;
+    color: floralwhite;
+    margin: 1rem;
+}
+
+.landing,
+.second-page,
+.last-page,
+.third-page  {
+    background: url(images/landing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.landing,
+.second-page {
+    min-height: 75rem;
+    margin: 0;
+}
+
+.disp,
+.landing,
+.second-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disp-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.disp-nowidth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-page {
+    background: url(images/art.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    min-height: 35rem;
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav {
+    height: 50%;
+    width: 160px;
+    position: fixed;
+    top: 35%;
+    left: 0;
+    padding-top: 20px;
+    padding: 15px;
+    
+}
+.sidenav button {
+    width: 160px;
+    height: 4rem;
+    font-size: 1rem;
+    position: absolute;
+    left: -140px;
+    transition: 0.3s;
+}
+.sidenav button:hover {
+    width: 160px;
+    height: 4rem;
+    font-size: 1rem;
+    left: 0px;
+}
+#s-bA {
+    margin-top: 0;
+}
+#s-bB {
+    margin-top: 5rem;
+}
+#s-bC {
+    margin-top: 10rem;
+}
+#s-bD {
+    margin-top: 15rem;
+}
+/*---------*/
+
+#starting-button {
+    width: 25rem;
+    height: 25rem;
+}
+
+.image-top {
+    width: 80%;
+    max-width: 500px;
+    min-width: 9rem;
+}
+
+/*---------*/
+
+.first-page div {
+    padding: 1rem;
+}
+
+.center {
+    padding: 5rem;
+    margin: auto auto;
+    height: auto;
+}
+
+.container-margin {
+    margin: 10rem;
+}
+
+/*---------*/
+
+.padd {
+    font-size: 2.2rem;
+    padding: 2rem; 
+    padding-bottom: 3rem;
+}
+
+.padd-header {
+    font-size: 3rem;
+    padding: 2rem; 
+    padding-bottom: 1rem;
+    text-shadow: black;
+}
+.padd-header-bot {
+    font-size: 2.2rem;
+    padding-bottom: 2rem;
+    color: dimgrey;
+    text-shadow: dimgrey;
+}
+
+.second-page {
+    padding-bottom: 1.5rem;
+}
+
+/*---------*/
+
+.second-row-height {
+    height: 25rem;
+    font-size: 1.5rem;
+    margin-left: 0px;
+    
+}
+
+/*---------*/
+
+#last-container {
+    max-width: 90%;
+}
+
+.footer-foot {
+    margin-bottom: 0px;
+    margin-top: auto;
+    padding: 0;
+    text-align: center;
+    font-size: 1.4vmin;   
+}
+
+.image-foot {
+    width: 40%;
+    max-width: 300px;
+    min-width: 5rem;
+}
+
+.div-min {
+    min-width: 17.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+/*---------*/
+
+.third-page {
+    margin: 0;
+    padding: 0;
+    min-height: 50rem;
+}
+
+#slider {
+    margin-top: 15rem;
+    margin-bottom: 3rem;
+    position: relative;
+    width: 80%;
+    min-height: 50rem;
+    overflow: hidden;
+}
+ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 9999%;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+}
+li {
+    top: 50%;
+    position: relative;
+    height: 100%;
+    width: calc(78.8vw);
+    float: left;
+}
+
+.margin-bottom {
+    margin-bottom: 15rem;
+}
+#prev, 
+#next {
+    font-size: 3rem;
+    height: 3.5rem;
+    margin: 0rem 2.5rem;
+    
+}
+
+/*---------*/
+
+.icon-link:link, .icon-link:visited, .icon-link:hover {
+    text-decoration: none;
+    text-align: center;
+    color:white;
+    font-size: 4rem;
+}
+
+.icon-github-circled-alt2:hover {
+	color: #333;
+	transition: all .2s ease-in;
+}
+
+.icon-dropbox:hover {
+	color: #0060FF;
+	transition: all .2s ease-in;
+}
+
+.icon-facebook:hover {
+	color: #3b5998;
+	transition: all .2s ease-in;
+}
+.icon-gmail:hover {
+	color: #c71610;
+	transition: all .2s ease-in;
+}
+
+.icon-facebook, .icon-dropbox, .icon-github-circled-alt2, .icon-gmail{
+	transition: all .2s ease-in;
+    color: white;
+}
+
+/*---------*/
+
+.hline {
+    width: 80%; 
+    border-style: none none solid none;
+    border-width: 5px;
+    border-color: floralwhite;
+    margin-top: -5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*---------*/
+
+
+
+@media screen and (max-width: 1200px) {
+    #starting-button {
+        width: 23rem;
+        height: 23rem;
+    }
+    button {
+        height: 14rem;
+        width: 14rem;
+    }
+    #pg {
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 850px) {
+    #starting-button {
+        width: 21rem;
+        height: 21rem;
+    }
+    button {
+        height: 12.5rem;
+        width: 12.5rem;
+    }
+    #pg {
+        font-size: 1.15rem;
+    }
+    .sidenav {
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 650px) {
+    #starting-button {
+        width: 19rem;
+        height: 19rem;
+    }
+    button {
+        height: 11rem;
+        width: 11rem;
+    }
+    #pg {
+        font-size: 1.0rem;
+    }
+    .sidenav {
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 550px) {
+    .second-row-height {
+        height: 15rem;
+        font-size: 1.5rem;
+        margin-left: 0px;
+    }
+    #pg {
+        font-size: 1.4rem;
+    }
+    .div-min {
+        min-width: 0rem;
+    }
+    .sidenav {
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 450px) {
+    #pg {
+        font-size: 1.2rem;
+    }
+    .sidenav {
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 350px) {
+    .second-row-height {
+        font-size: 1.4rem;
+    }
+    #pg {
+        font-size: 1.0rem;
+    }
+    .sidenav {
+        opacity: 0;
+    }
+}
+
+
