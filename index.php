@@ -15,11 +15,13 @@ $users = $usersQuery->fetchAll();
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
 		<link rel="stylesheet" href="style.css" type="text/css" />
 		<link rel="icon" type="image/gif" href="images/mentor.gif" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
         <title>Mentor</title>
         
         <script>
             
-				window.smoothScroll = function(target) {
+            window.smoothScroll = function(target) {
                     var scrollContainer = target;
                     do { //find scroll container
                         scrollContainer = scrollContainer.parentNode;
@@ -42,7 +44,7 @@ $users = $usersQuery->fetchAll();
                     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
                 }
                 
-                function hover(description, functionTarget) {
+            function hover(description, functionTarget) {
                     console.log(description);
                     document.getElementById(functionTarget).innerHTML = description;
                 }
@@ -101,63 +103,72 @@ $users = $usersQuery->fetchAll();
               responsiveSlider();  
             }
 
+
+            $(document).ready(function(){
+              $(window).scroll(function(){
+                  if($(window).scrollTop() + $(window).height() == $(document).height()){
+                    $("#s-bA").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bB").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bC").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bD").css("background" , "rgba(0,0,0,0.8)");
+                    $(".sidenav").css("opacity" , "1");
+                  }
+                  else if($(window).scrollTop() >= $("#p3").offset().top){
+                    $("#s-bA").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bB").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bC").css("background" , "rgba(0,0,0,0.8)");
+                    $("#s-bD").css("background" , "rgba(0,0,0,0.2)");
+                    $(".sidenav").css("opacity" , "1");
+                  }
+                  else if($(window).scrollTop() >= $("#p2").offset().top){
+                    $("#s-bA").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bB").css("background" , "rgba(0,0,0,0.8)");
+                    $("#s-bC").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bD").css("background" , "rgba(0,0,0,0.2)");
+                    $(".sidenav").css("opacity" , "1");
+                  }
+                  else if(($(window).scrollTop() + 200) >= $("#p1").offset().top){
+                    $("#s-bA").css("background" , "rgba(0,0,0,0.8)");
+                    $("#s-bB").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bC").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bD").css("background" , "rgba(0,0,0,0.2)");
+                    $(".sidenav").css("opacity" , "1");
+                  }
+                  else {
+                    $("#s-bA").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bB").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bC").css("background" , "rgba(0,0,0,0.2)");
+                    $("#s-bD").css("background" , "rgba(0,0,0,0.2)");
+                    $(".sidenav").css("opacity" , "0");
+                      
+                  }
+              })
+            })
+
+
 		</script>
 
     </head>
 
     <body>
         <div class="sidenav">
+          <button id="s-b0" onclick="smoothScroll(document.getElementById('landing'))">Start</button>
           <button id="s-bA" onclick="smoothScroll(document.getElementById('p1'))">O nas</button>
           <button id="s-bB" onclick="smoothScroll(document.getElementById('p2'))">Zespół</button>
           <button id="s-bC" onclick="smoothScroll(document.getElementById('p3'))">Aktualności</button>
           <button id="s-bD" onclick="smoothScroll(document.getElementById('p4'))">Kontakt</button>
         </div>
         
-        <div class="landing">
+        <div class="landing" id="landing">
             <div class="container">
-                <button id="starting-button" onclick="smoothScroll(document.getElementById('p0'))">
+                <button id="starting-button" onclick="smoothScroll(document.getElementById('p1'))">
                     <img src="images/mentor.png" 
                                  alt="Just our logo"
                                  class="u-max-full-width image-top" >
                 </button>
                             
             </div>
-        </div>
-        
-        
-        <div class="landing" id="p0">
-            <div class="container">
-                <div class="row">
-
-                    <div class="three columns disp">
-                        <div class="disp-center ">
-                            <button id="bA" onclick="smoothScroll(document.getElementById('p1'))">O nas</button>
-                        </div>
-                    </div>
-
-                    <div class="three columns disp">
-                        <div class="disp-center">
-                            <button id="bB" onclick="smoothScroll(document.getElementById('p2'))">Zespół</button>
-                        </div>
-                    </div>
-                    
-
-                    <div class="three columns disp">
-                        <div class="disp-center">
-                            <button id="bC" onclick="smoothScroll(document.getElementById('p3'))">Aktualności</button>
-                        </div>
-                    </div>
-                    
-
-                    <div class="three columns disp">
-                        <div class="disp-center">
-                            <button id="bD" onclick="smoothScroll(document.getElementById('p4'))">Kontakt</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+        </div>     
         
         <div id="p1" class="first-page">
             
@@ -186,6 +197,17 @@ $users = $usersQuery->fetchAll();
                         <img alt="Better then Html" src="images/net.png" class="u-max-full-width">
                     </div>
                 </div>
+                
+                <div class="row">
+                    <div class="twelve columns div-background padd">
+                        
+                        <a href="https://www.dropbox.com/s/mds2m7vctxs7a4q/Statut_KN_Mentor.pdf?dl=0" target="_blank" 
+                           id="statut-link"><p id="statut-par">
+                            Nasz statut</p>
+                        </a>
+                            
+                    </div>
+                </div>
             </div>
             
         </div>
@@ -208,7 +230,7 @@ $users = $usersQuery->fetchAll();
                 <div class="row disp-change">
                     <div class="two columns">
                         <img alt="Jerzy Duda" 
-                             src="images/skipper.png" 
+                             src="images/protector.png" 
                              class="u-max-full-width" 
                              onmouseover="hover('Adiunkt w Katedrze Informatyki Stosowanej na Wydziale Zarządzania AGH.<br/>Odpowiedzialny jest za rozwój naukowy oraz wsparcie merytoryczne.', 'jd')"
                              onmouseout="hover('dr inż. Jerzy Duda', 'jd')">
@@ -220,7 +242,7 @@ $users = $usersQuery->fetchAll();
                                         
                     <div class="two columns">
                         <img alt="Sabina Golonka" 
-                             src="images/kowalski.png" 
+                             src="images/boss.png" 
                              class="u-max-full-width"
                              onmouseover="hover('Studentka III roku Informatykii i ekonometrii. Pasjonatka podróży, informatyki i zarządzania.<br/> W zarządzie pełni rolę prezesa skupiając się na koordynowaniu projektów.', 'sg')"
                              onmouseout="hover('Sabina Golonka', 'sg')">
@@ -235,7 +257,7 @@ $users = $usersQuery->fetchAll();
                 <div class="row disp-change">
                     <div class="two columns">
                         <img alt="Monika Wielgus" 
-                             src="images/private.png" 
+                             src="images/member_one.png" 
                              class="u-max-full-width"
                              onmouseover="hover('Studentka V roku Informatyki i Ekonometrii pasjonująca się programowaniem, szczególnie w C#. Ponadto wielbicielka tańca, meczy piłki nożnej oraz dźwięku skrzypiec.', 'mw')"
                              onmouseout="hover('Monika Wielgus', 'mw')">
@@ -246,7 +268,7 @@ $users = $usersQuery->fetchAll();
                     </div>
                     <div class="two columns">
                         <img alt="Piotr Gretszel" 
-                             src="images/ricko.png" 
+                             src="images/member_two.png" 
                              class="u-max-full-width"
                              onmouseover="hover('Student III roku Informatyki i Ekonometrii. Interesuje się analizą danych i zagadnieniami ekonometrycznymi. W dziedzinie informatyki związany z środowiskiem .NET, językiem C# i technikami webowymi. Prywatnie miłośnik aktwyności sportowej, muzyki i poznawania świata. Jego rola w zarządzie to wspomaganie podejmowania decyzji i służenie dobrą radą.', 'pg')"
                              onmouseout="hover('Piotr Gretszel', 'pg')">
@@ -290,7 +312,7 @@ $users = $usersQuery->fetchAll();
                         <div class="row ">
                             <img src="images/mentor.png" 
                                  alt="Just our logo"
-                dd                 class="u-max-full-width image-foot" >
+                                 class="u-max-full-width image-foot" >
                         </div>
                         <div class="row">
                             <img src="images/agh.png" 
@@ -318,9 +340,6 @@ $users = $usersQuery->fetchAll();
                     <div class="one-third column">
                         <div class="row ">
                             <a href="https://www.facebook.com/KNMentor/" target="_blank" class="icon-link fb"><i class="demo-icon icon-facebook">&#xf09a;</i></a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.dropbox.com/s/mds2m7vctxs7a4q/Statut_KN_Mentor.pdf?dl=0" target="_blank" class="icon-link db"><i class="demo-icon icon-dropbox">&#xf16b;</i></a>
                         </div>
                         <div class="row">
                             <a href="https://github.com/KNMentor" target="_blank" class="icon-link gh"><i class="demo-icon icon-github-circled-alt2">&#xf056;</i></a>

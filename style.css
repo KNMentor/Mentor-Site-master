@@ -59,6 +59,11 @@ body {
     font-family: 'Jura', sans-serif;
     overflow-x: hidden;
     margin: 0;
+    background: url(images/landing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 button {
@@ -85,17 +90,12 @@ button {
 .second-page,
 .last-page,
 .third-page  {
-    background: url(images/landing.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
     margin: 0;
 }
 
 .landing,
 .second-page {
-    min-height: 75rem;
+    min-height: 100rem;
     margin: 0;
 }
 
@@ -121,9 +121,6 @@ button {
 }
 
 .first-page {
-    background: url(images/art.jpg);
-    background-position: center;
-    background-size: cover;
     display: flex;
     
     justify-content: center;
@@ -137,10 +134,11 @@ button {
     height: 50%;
     width: 160px;
     position: fixed;
-    top: 35%;
+    top: 40%;
     left: 0;
     padding-top: 20px;
     padding: 15px;
+    opacity: 0;
     
 }
 .sidenav button {
@@ -155,19 +153,27 @@ button {
     width: 160px;
     height: 4rem;
     font-size: 1rem;
-    left: 0px;
+    left: -20px;
+}
+#s-b0 {
+    margin-top: -5rem;
+    color: white;
 }
 #s-bA {
     margin-top: 0;
+    color: white;
 }
 #s-bB {
     margin-top: 5rem;
+    color: white;
 }
 #s-bC {
     margin-top: 10rem;
+    color: white;
 }
 #s-bD {
     margin-top: 15rem;
+    color: white;
 }
 /*---------*/
 
@@ -198,6 +204,7 @@ button {
     margin: 10rem;
 }
 
+
 /*---------*/
 
 .padd {
@@ -215,8 +222,8 @@ button {
 .padd-header-bot {
     font-size: 2.2rem;
     padding-bottom: 2rem;
-    color: dimgrey;
-    text-shadow: dimgrey;
+    color: black;
+    text-shadow: black;
 }
 
 .second-page {
@@ -317,11 +324,6 @@ li {
 	transition: all .2s ease-in;
 }
 
-.icon-dropbox:hover {
-	color: #0060FF;
-	transition: all .2s ease-in;
-}
-
 .icon-facebook:hover {
 	color: #3b5998;
 	transition: all .2s ease-in;
@@ -331,10 +333,24 @@ li {
 	transition: all .2s ease-in;
 }
 
-.icon-facebook, .icon-dropbox, .icon-github-circled-alt2, .icon-gmail{
+.icon-facebook, .icon-github-circled-alt2, .icon-gmail{
 	transition: all .2s ease-in;
     color: white;
 }
+
+#statut-link:link {
+    color:white;
+    text-decoration: none;
+}
+#statut-link:hover {
+    text-decoration: underline;
+}
+
+#statut-link:visited {
+    color:white;
+    text-decoration: none;
+}
+
 
 /*---------*/
 
